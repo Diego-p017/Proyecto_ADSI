@@ -8,27 +8,42 @@ package Modelo;
 
 /**
  * 
- * @author Sammy Guergachi <sguergachi at gmail.com>
+ * @author Diego Puentes Austiin Tellez 
  */
-public class Paciente {
+public class Paciente{
     
- private String identifiacion;
+ private String id;
  private String nombres;
  private String apellidos;
  private String fechaNacimiento;
+ private String genero;
+ 
+    public Paciente (
+        String id,
+        String nombres,
+        String apellidos,
+        String fechaNacimiento,
+        String genero
+    ){
+        this.id = id;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
+        this.genero = genero;
+    } 
 
     /**
      * @return the identifiacion
      */
     public String getIdentifiacion() {
-        return identifiacion;
+        return id;
     }
 
     /**
      * @param identifiacion the identifiacion to set
      */
     public void setIdentifiacion(String identifiacion) {
-        this.identifiacion = identifiacion;
+        this.id = identifiacion;
     }
 
     /**
@@ -71,5 +86,18 @@ public class Paciente {
      */
     public void setFechaNacimiento(String fechanacimiento) {
         this.fechaNacimiento = fechanacimiento;
+    }
+    /**
+     * @return the genero
+     */
+    public String getGenero() {
+        return genero;
+    }
+
+    /**
+     * @param apellidos the genero to set
+     */
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 }
