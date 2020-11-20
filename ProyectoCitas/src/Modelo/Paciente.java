@@ -12,14 +12,14 @@ package Modelo;
  */
 public class Paciente{
     
- private String id;
+ private int id;
  private String nombres;
  private String apellidos;
  private String fechaNacimiento;
  private String genero;
  
     public Paciente (
-        String id,
+        int id,
         String nombres,
         String apellidos,
         String fechaNacimiento,
@@ -33,17 +33,17 @@ public class Paciente{
     } 
 
     /**
-     * @return the identifiacion
+     * @return the identificacion
      */
-    public String getIdentifiacion() {
+    public int getIdentificacion() {
         return id;
     }
 
     /**
-     * @param identifiacion the identifiacion to set
+     * @param identificacion the identificacion to set
      */
-    public void setIdentifiacion(String identifiacion) {
-        this.id = identifiacion;
+    public void setIdentifiacion(int identificacion) {
+        this.id = identificacion;
     }
 
     /**
@@ -82,10 +82,10 @@ public class Paciente{
     }
 
     /**
-     * @param fechanacimiento the fechanacimiento to set
+     * @param fechaNacimiento the fechaNacimiento to set
      */
-    public void setFechaNacimiento(String fechanacimiento) {
-        this.fechaNacimiento = fechanacimiento;
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
     /**
      * @return the genero
@@ -94,9 +94,6 @@ public class Paciente{
         return genero;
     }
 
-    /**
-     * @param apellidos the genero to set
-     */
     public void setGenero(String genero) {
         this.genero = genero;
     }

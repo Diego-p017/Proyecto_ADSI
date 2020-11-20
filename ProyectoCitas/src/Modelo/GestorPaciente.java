@@ -26,7 +26,7 @@ public class GestorPaciente {
          try {
              con = conectar.getConnection();
              pst = con.prepareStatement("insert into pacientes values(?,?,?,?,?)");
-             pst.setString(1,paciente.getIdentifiacion());
+             pst.setInt(1,paciente.getIdentificacion());
              pst.setString(2,paciente.getNombres());
              pst.setString(3,paciente.getApellidos());
              pst.setString(4,paciente.getFechaNacimiento());

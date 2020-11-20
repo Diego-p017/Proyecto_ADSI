@@ -23,12 +23,12 @@ public class PacienteControl  implements ActionListener{
     GestorPacienteModelo = new Modelo.GestorPaciente();
     
 }
-
+    
  @Override
  public void actionPerformed(ActionEvent e){
      if(e.getSource().equals(pacienteVista.BtnRegistrar)){
          
-         String id = pacienteVista.TxtID.getText();
+         Int id = pacienteVista.TxtID.getText();
          String nombres = pacienteVista.TxtNombre.getText();
          String apellidos = pacienteVista.TxtApellidos.getText();
          DateFormat formato = new SimpleDateFormat("yyy-MM-dd");
