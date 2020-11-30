@@ -12,38 +12,30 @@ package Modelo;
  */
 public class Paciente{
     
- private int id;
+ private String identificacion;
  private String nombres;
  private String apellidos;
  private String fechaNacimiento;
  private String genero;
- 
-    public Paciente (
-        int id,
-        String nombres,
-        String apellidos,
-        String fechaNacimiento,
-        String genero
-    ){
-        this.id = id;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.fechaNacimiento = fechaNacimiento;
-        this.genero = genero;
-    } 
+
+    public Paciente(String identificacion, String nombres, String apellidos, String fecha_nacimiento, String genero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+        
 
     /**
      * @return the identificacion
      */
-    public int getIdentificacion() {
-        return id;
+    public String getIdentificacion() {
+        return identificacion;
     }
 
     /**
      * @param identificacion the identificacion to set
      */
-    public void setIdentifiacion(int identificacion) {
-        this.id = identificacion;
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
     /**
@@ -75,7 +67,7 @@ public class Paciente{
     }
 
     /**
-     * @return the fechanacimiento
+     * @return the fechaNacimiento
      */
     public String getFechaNacimiento() {
         return fechaNacimiento;
@@ -87,6 +79,7 @@ public class Paciente{
     public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
+
     /**
      * @return the genero
      */
@@ -94,7 +87,11 @@ public class Paciente{
         return genero;
     }
 
+    /**
+     * @param genero the genero to set
+     */
     public void setGenero(String genero) {
         this.genero = genero;
     }
 }
+ 
