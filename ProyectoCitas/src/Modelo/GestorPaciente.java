@@ -14,6 +14,7 @@ public class GestorPaciente {
      Connection con;
      Conexion conectar = new Conexion();
      
+<<<<<<< HEAD
      public void RegistrarPacientes(Paciente paciente){
          
          PreparedStatement pst;
@@ -31,9 +32,40 @@ public class GestorPaciente {
              Logger.getLogger(GestorPaciente.class.getName()).log(Level.SEVERE, null, ex);
          }
           pacientes.add(paciente);
-        
- 
+     }
      
+    // public LinkedList<Paciente> getPacientebyParametro(int parametro, String valor){
+     //    LinkedList<Paciente> resultado = new LinkedList<Paciente>();
+       //  String sql="";
+     //}
+     
+    
+    
+=======
+     PreparedStatement pst;
+    public GestorPaciente(){
+        pacientes=new LinkedList<Paciente>();
+    }
+>>>>>>> 8043944ea44e6caa46aef11069552c2fc0e5946a
+    
+   public void RegistrarPacientes(Paciente paciente){
+  
+        //PreparedStatement pst;
+        try {
+            con = conectar.getConnection();
+            pst = con.prepareStatement("insert into pacientes values(?,?,?,?,?)");
+            pst.setString(1,paciente.getIdentificacion());
+            pst.setString(2,paciente.getNombres());
+            pst.setString(3,paciente.getApellidos());
+            pst.setString(4,paciente.getFechaNacimiento());
+            pst.setString(5,paciente.getGenero());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Paciente Registrado");
+        } catch (SQLException ex) {
+            Logger.getLogger(GestorPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        pacientes.add(paciente);
     }
     public static void getPacientebyParametro(int parametro, String valor){
         LinkedList<Paciente> resultado=new LinkedList<Paciente>();
