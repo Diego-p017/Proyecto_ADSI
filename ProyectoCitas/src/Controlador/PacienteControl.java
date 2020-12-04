@@ -28,22 +28,27 @@ public class PacienteControl  implements ActionListener{
  public void actionPerformed(ActionEvent e){
      if(e.getSource().equals(pacienteVista.BtnRegistrar)){
          
-         String id = pacienteVista.TxtID.getText();
-         String nombres = pacienteVista.TxtNombre.getText();
-         String apellidos = pacienteVista.TxtApellidos.getText();
+         String PacIdentificacion = pacienteVista.TxtID.getText();
+         String PacNombre = pacienteVista.TxtNombre.getText();
+         String PacApellido = pacienteVista.TxtApellidos.getText();
         // DateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
         // String fechaNacimiento = formato.format (pacienteVista.DbdFechaNaci);
-        Date fechaNacimiento = pacienteVista.DbdFechaNaci.getDate();
-         String genero = "";
+          SimpleDateFormat formato=new SimpleDateFormat("yyyy/MM/dd");
+         String PacfechaNacimiento=formato.format(pacienteVista.DbdFechaNaci.getDate());
+         String PacSexo = "";
             if(pacienteVista.RdbM.isSelected()){
-                genero = "M";
+                PacSexo = "M";
             }
             if(pacienteVista.RdbF.isSelected()){
-                genero = "F";
+                PacSexo = "F";
             }
             
-        pacienteModelo = new Modelo.Paciente(id,nombres,apellidos,fechaNacimiento,genero);
-            GestorPacienteModelo.RegistrarPacientes(pacienteModelo);            
+        pacienteModelo = new Modelo.Paciente(  PacIdentificacion,
+        PacNombre,
+        PacApellido,
+        PacfechaNacimiento,
+        PacSexo);
+           GestorPacienteModelo.RegistrarPacientes(pacienteModelo);            
      }
      
      if(e.getSource().equals(pacienteVista.BtnNuevo)){
