@@ -1,29 +1,20 @@
 
 package Controlador;
 
-/**
- * @author AustiinTellez
- */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.DateFormat;
+
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
-
-public class PacienteControl  implements ActionListener{
-    
-    Vista.RegPaciente pacienteVista;
-    Modelo.Paciente pacienteModelo;
-    Modelo.GestorPaciente GestorPacienteModelo;
-
-    public PacienteControl(Vista.RegPaciente pacienteVista){
-
-    this.pacienteVista = pacienteVista;
-    GestorPacienteModelo = new Modelo.GestorPaciente();
-    
+public class PacienteControl implements ActionListener {
+   Vista.RegPaciente pacienteVista;
+ Modelo.Paciente pacienteModelo;
+ Modelo.GestorPaciente gestorpacienteModelo;
+ 
+public PacienteControl(Vista.RegPaciente pacienteVista){
+this.pacienteVista=pacienteVista;
+gestorpacienteModelo=new Modelo.GestorPaciente();
 }
-
  @Override
  public void actionPerformed(ActionEvent e){
      if(e.getSource().equals(pacienteVista.BtnRegistrar)){

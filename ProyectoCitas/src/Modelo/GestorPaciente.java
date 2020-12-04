@@ -1,24 +1,18 @@
-
-
 package Modelo;
 import java.util.*;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import Recursos.Conexion;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-
+/**
+*
+* @author Usuario
+*/
 public class GestorPaciente {
-    private static LinkedList<Paciente> pacientes; 
-    Connection con;
-     Conexion conectar = new Conexion ();
-     
-     public GestorPaciente(){
-         pacientes = new LinkedList<Paciente>();
-     }
+    private static LinkedList<Paciente> pacientes;
+     Connection con;
+     Conexion conectar = new Conexion();
      
      public void RegistrarPacientes(Paciente paciente){
          
@@ -44,7 +38,29 @@ public class GestorPaciente {
        //  String sql="";
      //}
      
-    
-    
-    
+    }
+    public static void getPacientebyParametro(int parametro, String valor){
+        LinkedList<Paciente> resultado=new LinkedList<Paciente>();
+        
+    for(Paciente pac:pacientes){
+           switch(parametro){
+        case 1: if(pac.getIdentificacion().equals(valor)){
+        resultado.add(pac);}
+        break;
+        
+        case 2: if(pac.getNombres().equals(valor)){
+        resultado.add(pac);}
+        break;
+        
+        case 3: if(pac.getApellidos().equals(valor)){
+        resultado.add(pac);}
+        break;
+        
+        case 4: if(pac.getGenero().equals(valor)){
+        resultado.add(pac);}
+        break;
+
+    }
+   }
+  }
 }

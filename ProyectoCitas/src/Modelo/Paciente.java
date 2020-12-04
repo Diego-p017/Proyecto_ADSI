@@ -6,6 +6,8 @@
 
 package Modelo;
 
+import java.util.Date;
+
 /**
  * 
  * @author Diego Puentes Austiin Tellez 
@@ -48,10 +50,6 @@ public class Paciente{
     public void setIdentificacion(String identificacion) {
         this.PacIdentificacion = identificacion;
     }
-
-    /**
-     * @return the nombres
-     */
     public String getNombres() {
         return PacNombre;
     }
@@ -62,10 +60,6 @@ public class Paciente{
     public void setNombres(String nombre) {
         this.PacNombre = nombre;
     }
-
-    /**
-     * @return the apellidos
-     */
     public String getApellidos() {
         return PacApellido;
     }
@@ -76,10 +70,6 @@ public class Paciente{
     public void setApellidos(String apellido) {
         this.PacApellido = apellido;
     }
-
-    /**
-     * @return the fechanacimiento
-     */
     public String getFechaNacimiento() {
         return PacfechaNacimiento;
     }
@@ -90,6 +80,7 @@ public class Paciente{
     public void setFechaNacimiento(String fechaNacimiento) {
         this.PacfechaNacimiento = fechaNacimiento;
     }
+
     /**
      * @return the genero
      */
@@ -103,4 +94,5 @@ public class Paciente{
     public void setGenero(String sexo) {
         this.PacSexo = sexo;
     }
+    
 }

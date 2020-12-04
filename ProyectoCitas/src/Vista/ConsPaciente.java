@@ -27,40 +27,43 @@ public class ConsPaciente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        rdb_nombres = new javax.swing.JRadioButton();
+        rdb_apellidos = new javax.swing.JRadioButton();
+        rdb_genero = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txt_valor = new javax.swing.JTextField();
+        btn_aceptar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        tbl_datos = new javax.swing.JTable();
+        rdb_identificacion = new javax.swing.JRadioButton();
 
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
         setTitle("Conslta Pacientes");
 
-        jRadioButton2.setText("Nombres");
+        rdb_nombres.setText("Nombres");
+        rdb_nombres.setName("nombres"); // NOI18N
 
-        jRadioButton3.setText("Apellidos");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        rdb_apellidos.setText("Apellidos");
+        rdb_apellidos.setName("apellidos"); // NOI18N
+        rdb_apellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                rdb_apellidosActionPerformed(evt);
             }
         });
 
-        jRadioButton4.setText("Sexo");
+        rdb_genero.setText("Sexo");
+        rdb_genero.setName("genero"); // NOI18N
 
         jLabel1.setText("Valor a Buscar:");
 
-        jTextField1.setName("ValorTxt"); // NOI18N
+        txt_valor.setName("valor a buscar"); // NOI18N
 
-        jButton1.setText("Aceptar");
-        jButton1.setName("AceptarBtn"); // NOI18N
+        btn_aceptar.setText("Aceptar");
+        btn_aceptar.setName("AceptarBtn"); // NOI18N
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_datos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -71,10 +74,11 @@ public class ConsPaciente extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setName("ResultadosTbl"); // NOI18N
-        jScrollPane1.setViewportView(jTable1);
+        tbl_datos.setName("tabla"); // NOI18N
+        jScrollPane1.setViewportView(tbl_datos);
 
-        jRadioButton1.setText("Identificacion");
+        rdb_identificacion.setText("Identificacion");
+        rdb_identificacion.setName("identificacion"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,19 +92,19 @@ public class ConsPaciente extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_valor, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1))
+                                .addComponent(btn_aceptar))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
-                        .addComponent(jRadioButton1)
+                        .addComponent(rdb_identificacion)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)
+                        .addComponent(rdb_nombres)
                         .addGap(14, 14, 14)
-                        .addComponent(jRadioButton3)
+                        .addComponent(rdb_apellidos)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton4)))
+                        .addComponent(rdb_genero)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -108,15 +112,15 @@ public class ConsPaciente extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(rdb_identificacion)
+                    .addComponent(rdb_nombres)
+                    .addComponent(rdb_apellidos)
+                    .addComponent(rdb_genero))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(txt_valor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_aceptar))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
@@ -125,20 +129,20 @@ public class ConsPaciente extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void rdb_apellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdb_apellidosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_rdb_apellidosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btn_aceptar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JRadioButton rdb_apellidos;
+    public javax.swing.JRadioButton rdb_genero;
+    public javax.swing.JRadioButton rdb_identificacion;
+    public javax.swing.JRadioButton rdb_nombres;
+    public javax.swing.JTable tbl_datos;
+    public javax.swing.JTextField txt_valor;
     // End of variables declaration//GEN-END:variables
 }
