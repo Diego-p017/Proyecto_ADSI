@@ -196,9 +196,24 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
+<<<<<<< HEAD
     <Component class="com.toedter.calendar.JDateChooser" name="DbdFechaNaci">
       <Properties>
         <Property name="dateFormatString" type="java.lang.String" value="yyyy/MM/dd"/>
+=======
+    <Component class="com.toedter.calendar.JDateChooser" name="Dtd_fecha_nacimiento">
+      <Properties>
+        <Property name="dateFormatString" type="java.lang.String" value="yyyy/MM/dd"/>
+        <Property name="name" type="java.lang.String" value="fecha nacimiento" noResource="true"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnRegistrar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registrar"/>
+>>>>>>> 8043944ea44e6caa46aef11069552c2fc0e5946a
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
