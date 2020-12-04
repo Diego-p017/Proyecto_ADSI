@@ -8,13 +8,13 @@ import java.text.SimpleDateFormat;
 
 public class PacienteControl implements ActionListener {
    Vista.RegPaciente pacienteVista;
- Modelo.Paciente pacienteModelo;
- Modelo.GestorPaciente gestorpacienteModelo;
+   Modelo.Paciente pacienteModelo;
+   Modelo.GestorPaciente gestorpacienteModelo;
  
-public PacienteControl(Vista.RegPaciente pacienteVista){
-this.pacienteVista=pacienteVista;
-gestorpacienteModelo=new Modelo.GestorPaciente();
-}
+    public PacienteControl(Vista.RegPaciente pacienteVista){
+         this.pacienteVista=pacienteVista;
+         gestorpacienteModelo=new Modelo.GestorPaciente();
+    }
 @Override
 public void actionPerformed(ActionEvent e){
          if(e.getSource().equals(pacienteVista.BtnRegistrar)){

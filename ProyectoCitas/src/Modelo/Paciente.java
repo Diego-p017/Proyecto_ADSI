@@ -14,62 +14,62 @@ import java.util.Date;
  */
 public class Paciente{
     
-  private String identificacion;
-    private String nombres;
-    private String apellidos;
-    private String fechaNacimiento;
-    private String genero;
+  private String PacIdentificacion;
+    private String PacNombre;
+    private String PacApellido;
+    private String PacFechaNacimiento;
+    private String PacSexo;
 
-    public Paciente(String id, String nom,String ape, String fec, String gen){
-     identificacion=id;
-     nombres=nom;
-     apellidos=ape;
-     fechaNacimiento=fec;
-     genero=gen;
+    public Paciente(String PacIdentificacion, String PacNombre,String PacApellido, String PacFechaNacimiento, String PacSexo){
+     this.PacIdentificacion = PacIdentificacion;
+     this.PacNombre = PacNombre;
+     this.PacApellido = PacApellido;
+     this.PacFechaNacimiento = PacFechaNacimiento;
+     this.PacSexo = PacSexo;
     }
 
-    public Paciente() {
+    Paciente(String string, String string0, String string1, String string2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     public String getIdentificacion() {
-        return identificacion;
+        return PacIdentificacion;
     }
     public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
+        this.PacIdentificacion = identificacion;
     }
+    
+    
     public String getNombres() {
-        return nombres;
+        return PacNombre;
     }
     public void setNombres(String nombres) {
-        this.nombres = nombres;
+        this.PacNombre = nombres;
     }
+    
+    
     public String getApellidos() {
-        return apellidos;
+        return PacApellido;
     }
     public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+        this.PacApellido = apellidos;
     }
+    
+    
     public String getFechaNacimiento() {
-        return fechaNacimiento;
+        return PacFechaNacimiento;
     }
-
     
     public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+        this.PacFechaNacimiento = fechaNacimiento;
     }
-
-    /**
-     * @return the genero
-     */
+    
+   
     public String getGenero() {
-        return genero;
+        return PacSexo;
     }
-
-    /**
-     * @param genero the genero to set
-     */
     public void setGenero(String genero) {
-        this.genero = genero;
+        this.PacSexo = genero;
     }
     
 }
