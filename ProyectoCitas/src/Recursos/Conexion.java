@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 public class Conexion {
     
-    String url="jdbc:mysql://localhost:3306/citas2020";
+    String url="jdbc:mysql://localhost:3306/gestion_citas";
     String user="root",pass="";
     Connection con;
     public Connection getConnection(){

@@ -79,6 +79,8 @@ public class RegPaciente extends javax.swing.JInternalFrame {
 
         TxtApellidos.setName("ApellidosTxt"); // NOI18N
 
+        DbdFechaNaci.setDateFormatString("yyyy/MM/dd");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
