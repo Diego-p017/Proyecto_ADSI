@@ -14,92 +14,62 @@ import java.util.Date;
  */
 public class Paciente{
     
+  private String identificacion;
+    private String nombres;
+    private String apellidos;
+    private String fechaNacimiento;
+    private String genero;
 
- private String PacIdentificacion;
- private String PacNombre;
- private String PacApellido;
- private String PacfechaNacimiento;
- private String PacSexo;
- 
-    public Paciente (
-        String PacIdentificacion,
-        String PacNombre,
-        String PacApellido,
-        String PacfechaNacimiento,
-        String PacSexo
-    ){
-        this.PacIdentificacion = PacIdentificacion;
-        this.PacNombre = PacNombre;
-        this.PacApellido = PacApellido;
-        this.PacfechaNacimiento = PacfechaNacimiento;
-        this.PacSexo = PacSexo;
-        
-    } 
-
-    
-
-    /**
-     * @return the identifiacion
-     */
-    public String getIdentificacion() {
-        return PacIdentificacion;
+    public Paciente(String id, String nom,String ape, String fec, String gen){
+     identificacion=id;
+     nombres=nom;
+     apellidos=ape;
+     fechaNacimiento=fec;
+     genero=gen;
     }
 
-    /**
-     * @param identifiacion the identifiacion to set
-     */
-    public void setIdentificacion(String identificacion) {
-        this.PacIdentificacion = identificacion;
-
+    public Paciente() {
+    }
     
+    public String getIdentificacion() {
+        return identificacion;
+    }
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
     public String getNombres() {
-        return PacNombre;
+        return nombres;
     }
-
-    /**
-     * @param nombres the nombres to set
-     */
-    public void setNombres(String nombre) {
-        this.PacNombre = nombre;
-
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
     }
     public String getApellidos() {
-        return PacApellido;
+        return apellidos;
     }
-
-    /**
-     * @param apellidos the apellidos to set
-     */
-    public void setApellidos(String apellido) {
-        this.PacApellido = apellido;
-
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
     public String getFechaNacimiento() {
-        return PacfechaNacimiento;
+        return fechaNacimiento;
     }
 
-
-    /**
-     * @param fechaNacimiento the apellidos to set
-     */
+    
     public void setFechaNacimiento(String fechaNacimiento) {
-        this.PacfechaNacimiento = fechaNacimiento;
-
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     /**
      * @return the genero
      */
     public String getGenero() {
-        return PacSexo;
+        return genero;
     }
 
     /**
      * @param genero the genero to set
      */
-    public void setGenero(String sexo) {
-        this.PacSexo = sexo;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
     
 }
