@@ -39,40 +39,42 @@ public class GestorPaciente {
         pacientes.add(paciente);
     }
     public LinkedList<Paciente> getPacientebyParametro(int parametro, String valor){
-        con = conectar.getConnection();
+      con = conectar.getConnection();
         LinkedList<Paciente> resultado=new LinkedList<Paciente>();
         String sql="";
         for(Paciente pac:pacientes){
            switch(parametro){
                
             case 1: if(pac.getIdentificacion().equals(valor)){
-                sql = "select * from pacientes where PacIdentificacion = '"+valor+"'";
+                sql = "select * from pacientes where PacIdentificacion='"+valor+"'";
+                
                 resultado.add(pac);}
             break;
         
             case 2: if(pac.getNombres().equals(valor)){
-                sql = "select * from pacientes where PacNombre = '"+valor+"'";
+                sql = "select * from pacientes where PacNombre='"+valor+"'";
                 resultado.add(pac);}
             break;
         
             case 3: if(pac.getApellidos().equals(valor)){
-                 sql = "select * from pacientes where PacApellido = '"+valor+"'";
+                 sql = "select * from pacientes where PacApellido='"+valor+"'";
                  resultado.add(pac);}
             break;
         
             case 4: if(pac.getGenero().equals(valor)){
-                sql = "select * from pacientes where PacSexo = '"+valor+"'";
+                sql = "select * from pacientes where PacSexo='"+valor+"'";
                 resultado.add(pac);}
             break;
 
     }
    }
-        try(Statement st = con.createStatement() ){
+          try(Statement st = con.createStatement() ){
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 
-                resultado.add(new Paciente(rs.getString("PacIdentificacion"),rs.getString("PacNombre"),rs.getString("PacApellido"),rs.getString("PacSexo") ));
+                resultado.add(new Paciente(rs.getString("PacIdentificacion"),rs.getString("PacNombre"),rs.getString("PacApellido"),rs.getString("PacFechaNacimiento"),rs.getString("PacSexo") ));
             }
+            st.close();
         }catch(SQLException e){
             JOptionPane.showMessageDialog(null, e.getMessage());
         }

@@ -20,17 +20,15 @@ public class Paciente{
     private String PacFechaNacimiento;
     private String PacSexo;
 
-    public Paciente(String PacIdentificacion, String PacNombre,String PacApellido, String PacFechaNacimiento, String PacSexo){
-     this.PacIdentificacion = PacIdentificacion;
-     this.PacNombre = PacNombre;
-     this.PacApellido = PacApellido;
-     this.PacFechaNacimiento = PacFechaNacimiento;
-     this.PacSexo = PacSexo;
+    public Paciente(String PacIdenti, String PacNom,String PacApel, String PacFechaNaci, String PacSex){
+     PacIdentificacion = PacIdenti;
+     PacNombre = PacNom;
+     PacApellido = PacApel;
+     PacFechaNacimiento = PacFechaNaci;
+     PacSexo = PacSex;
     }
 
-    Paciente(String string, String string0, String string1, String string2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     public String getIdentificacion() {
         return PacIdentificacion;

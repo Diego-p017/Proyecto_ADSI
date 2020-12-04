@@ -16,16 +16,18 @@ public class GestorPacienteControl implements ActionListener{
         pacientesModelo=new Modelo.GestorPaciente();
     }
     
-    @Override
+    
     public void actionPerformed(ActionEvent e){
         
         DefaultTableModel tmodelo;
         String valor=consultarPacienteVista.txt_valor.getText();
+        System.out.println("valor ="+valor);
         int parametro=0;
         
         
         if(consultarPacienteVista.rdb_identificacion.isSelected()){
             parametro=1;
+             System.out.println("parametro ="+parametro);
            }
         if(consultarPacienteVista.rdb_nombres.isSelected()){
             parametro=2;
@@ -40,7 +42,7 @@ public class GestorPacienteControl implements ActionListener{
         LinkedList<Modelo.Paciente> pacientes=pacientesModelo.getPacientebyParametro(parametro, valor);
         String registro[] = new String[5];
         
-        String []Titulos = {"Identificacion","Nombre","Apellido","Genero"};
+        String []Titulos = {"Identificacion","Nombre","Apellido","Fecha Nacimiento","Genero"};
 
          tmodelo = new DefaultTableModel();
          tmodelo.setColumnIdentifiers(Titulos);

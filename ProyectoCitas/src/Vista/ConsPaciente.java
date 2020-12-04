@@ -10,7 +10,7 @@ public class ConsPaciente extends javax.swing.JInternalFrame {
     public ConsPaciente() {
         initComponents();
         gestorPacientecontrol = new Controlador.GestorPacienteControl(this);
-        String titulosTabla[]={"Identificacion","Nombre","Apellido","Genero"};
+        String titulosTabla[]={"Identificacion","Nombre","Apellido","Fecha Nacimiento","Genero"};
         tabla = new DefaultTableModel(null,titulosTabla);
         tbl_datos.setModel(tabla);
         btn_aceptar.addActionListener(gestorPacientecontrol);
@@ -71,7 +71,7 @@ public class ConsPaciente extends javax.swing.JInternalFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Identificacion", "Nombre", "Apellidos", "Genero"
             }
         ));
         tbl_datos.setName("tabla"); // NOI18N
