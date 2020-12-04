@@ -21,7 +21,6 @@ public class RegPaciente extends javax.swing.JInternalFrame {
 
         rdb_masculino = new javax.swing.JRadioButton();
         rdb_femenino = new javax.swing.JRadioButton();
-        BtnRegistrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         BtnNuevo = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -32,6 +31,7 @@ public class RegPaciente extends javax.swing.JInternalFrame {
         txt_nombres = new javax.swing.JTextField();
         txt_apellidos = new javax.swing.JTextField();
         Dtd_fecha_nacimiento = new com.toedter.calendar.JDateChooser();
+        BtnRegistrar = new javax.swing.JButton();
 
         setClosable(true);
         setMaximizable(true);
@@ -49,13 +49,6 @@ public class RegPaciente extends javax.swing.JInternalFrame {
 
         rdb_femenino.setText("Femenino");
         rdb_femenino.setName("Femenino"); // NOI18N
-
-        BtnRegistrar.setText("Registrar");
-        BtnRegistrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnRegistrarActionPerformed(evt);
-            }
-        });
 
         jLabel1.setText("Identificación:");
         jLabel1.setToolTipText("text");
@@ -79,7 +72,10 @@ public class RegPaciente extends javax.swing.JInternalFrame {
 
         txt_apellidos.setName("apellidos"); // NOI18N
 
+        Dtd_fecha_nacimiento.setDateFormatString("yyyy/MM/dd");
         Dtd_fecha_nacimiento.setName("fecha nacimiento"); // NOI18N
+
+        BtnRegistrar.setText("Registrar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,10 +140,10 @@ public class RegPaciente extends javax.swing.JInternalFrame {
                     .addComponent(jLabel5)
                     .addComponent(rdb_masculino)
                     .addComponent(rdb_femenino))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnRegistrar)
-                    .addComponent(BtnNuevo))
+                    .addComponent(BtnNuevo)
+                    .addComponent(BtnRegistrar))
                 .addGap(20, 20, 20))
         );
 
@@ -157,10 +153,6 @@ public class RegPaciente extends javax.swing.JInternalFrame {
     private void rdb_masculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdb_masculinoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rdb_masculinoActionPerformed
-
-    private void BtnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnRegistrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
