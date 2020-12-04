@@ -31,12 +31,8 @@ public class GestorPaciente {
              Logger.getLogger(GestorPaciente.class.getName()).log(Level.SEVERE, null, ex);
          }
           pacientes.add(paciente);
-     }
-     
-    // public LinkedList<Paciente> getPacientebyParametro(int parametro, String valor){
-     //    LinkedList<Paciente> resultado = new LinkedList<Paciente>();
-       //  String sql="";
-     //}
+        
+ 
      
     }
     public static void getPacientebyParametro(int parametro, String valor){
