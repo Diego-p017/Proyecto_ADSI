@@ -34,6 +34,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         Registrar = new javax.swing.JMenuItem();
         RegistrarMedico = new javax.swing.JMenuItem();
+        RegistrarConsultorio = new javax.swing.JMenuItem();
         Consultar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,6 +79,14 @@ public class PrincipalJFrame extends javax.swing.JFrame {
             }
         });
         jMenu2.add(RegistrarMedico);
+
+        RegistrarConsultorio.setText("Registrar Consultorio");
+        RegistrarConsultorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarConsultorioActionPerformed(evt);
+            }
+        });
+        jMenu2.add(RegistrarConsultorio);
 
         Consultar.setText("Consultar");
         Consultar.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +138,12 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         registrarMed.show();
     }//GEN-LAST:event_RegistrarMedicoActionPerformed
 
+    private void RegistrarConsultorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarConsultorioActionPerformed
+        RegConsultorio registrarCon = new RegConsultorio();
+        this.Escritorio.add(registrarCon);
+        registrarCon.show();
+    }//GEN-LAST:event_RegistrarConsultorioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -168,6 +183,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem Consultar;
     private javax.swing.JPanel Escritorio;
     private javax.swing.JMenuItem Registrar;
+    private javax.swing.JMenuItem RegistrarConsultorio;
     private javax.swing.JMenuItem RegistrarMedico;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
