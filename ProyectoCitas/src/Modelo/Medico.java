@@ -11,12 +11,12 @@ package Modelo;
  */
 public class Medico {
     
-    private int MedIdentificacion;
+    private String MedIdentificacion;
     private String MedNombre;
     private String MedApellido;
     
     public Medico (
-        int MedIdentificacion,
+        String MedIdentificacion,
         String MedNombre,
         String MedApellido
     ){
@@ -27,14 +27,14 @@ public class Medico {
     /**
      * @return the MedIdentificacion
      */
-    public int getMedIdentificacion() {
+    public String getMedIdentificacion() {
         return MedIdentificacion;
     }
 
     /**
      * @param MedIdentificacion the MedIdentificacion to set
      */
-    public void setMedIdentificacion(int MedIdentificacion) {
+    public void setMedIdentificacion(String MedIdentificacion) {
         this.MedIdentificacion = MedIdentificacion;
     }
 

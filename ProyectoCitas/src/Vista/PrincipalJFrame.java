@@ -33,6 +33,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         Registrar = new javax.swing.JMenuItem();
+        RegistrarMedico = new javax.swing.JMenuItem();
         Consultar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,13 +63,21 @@ public class PrincipalJFrame extends javax.swing.JFrame {
 
         jMenu2.setText("Pacientes");
 
-        Registrar.setText("Registrar");
+        Registrar.setText("Registrar Paciente");
         Registrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarActionPerformed(evt);
             }
         });
         jMenu2.add(Registrar);
+
+        RegistrarMedico.setText("Registrar Medico");
+        RegistrarMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarMedicoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(RegistrarMedico);
 
         Consultar.setText("Consultar");
         Consultar.addActionListener(new java.awt.event.ActionListener() {
@@ -114,6 +123,12 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         registrar.show();
     }//GEN-LAST:event_RegistrarActionPerformed
 
+    private void RegistrarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarMedicoActionPerformed
+        RegMedico registrarMed = new RegMedico();
+        this.Escritorio.add(registrarMed);
+        registrarMed.show();
+    }//GEN-LAST:event_RegistrarMedicoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -153,6 +168,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem Consultar;
     private javax.swing.JPanel Escritorio;
     private javax.swing.JMenuItem Registrar;
+    private javax.swing.JMenuItem RegistrarMedico;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
