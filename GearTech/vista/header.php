@@ -9,6 +9,13 @@
     </nav>
     <div class="userbar">
         <i class="fas fa-search"></i>
-        <i class="far fa-user"></i>
+        <div class="dropdown-container">
+            <i class="far fa-user"></i>
+            <ul class="dropdown-items">
+                <li><a href="login.php">Ingresar</a></li>
+                <li><a href="register.php">Registrarse</a></li>
+            </ul>
+        </div>
+        
     </div>
 </header>

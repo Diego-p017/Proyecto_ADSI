@@ -13,6 +13,7 @@
                 <input class="input" type="email" name="" id="" placeholder="correo electronico">
                 <input class="input" type="password" name="" id="" placeholder="contraseña">
             </form>
+            <a href="" class="enlace-contraseña">¿olvido su contraseña?</a>
             <input class="btn btn-submit" type="submit" value="Ingresar">
             </div>
         </div>
