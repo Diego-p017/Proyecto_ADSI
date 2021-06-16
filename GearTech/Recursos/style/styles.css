@@ -13,13 +13,14 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
 
-  }
+}
   *, *:before, *:after {
     box-sizing: inherit;
-  }
+}
 body{
     font-size: 1.6rem;
     font-family: var(--fuente-heading);
+    background-color: var(--fondo);
 }
 /* Globales */
 .contenedor{
@@ -465,4 +466,67 @@ h2{
 .contenido-info-producto{
     padding: 1rem;
     color: var(--blanco);
+}
+
+/*Carrito compra*/
+.titulo-carrito{
+    display: flex;
+    align-items: center;
+    color: var(--blanco);
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+.titulo-carrito i{
+    margin-left: 2rem;
+}
+
+.carrito-compra{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.listado-carrito-compra{
+    background-color: var(--amarillo);
+    text-align: center;
+    max-width: 100%;
+    flex-basis: calc( 70% - 2rem);
+    border-radius: 2rem;
+
+}
+.tabla-carrito-compra{
+    width: 90%;
+
+}
+.encabezado-carrito{
+    font-size: 2rem;
+    padding:  1rem 2rem;
+}
+.producto-carrito-compra td{
+    padding: 1rem;
+}
+.detalles-carrito-compra{
+    background-color:  var(--gris);
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    flex-basis: calc( 30% - 2rem);
+}
+.list-detalles{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+.list-detalles li{
+    margin-bottom: 2rem;
+}
+.list-detalles span{
+    color: var(--blanco);
+    font-weight: 600;
+}
+.subtotal-detalles{
+    border-bottom: 1px solid var(--primario);
+    margin-bottom: 2rem;
+}
+.total{
+    font-size: 3rem;
+    font-weight: 700;
 }
