@@ -9,44 +9,51 @@
     flex-direction: column;
 }
 
-.contenedor{
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-}
-
 .seccion-productos{
     background-color: var(--fondo) ;
-    height: 50rem;
+    min-height: 50rem;
 }
 .nuestros-productos{
-    display: grid;
-    grid-template-columns: repeat( 4, 1fr);
-    gap: 4rem;
-    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+@media (min-width:650px){
+    .nuestros-productos{
+        display: grid;
+        grid-template-columns: repeat( 4, 1fr);
+        gap: 4rem;
+        margin-top: 3rem;
+    }
+}
+
 .titulo-productos{
     color: var(--blanco);
     padding: 4rem 0;
 }
+
 .productos{
     background-color: var(--amarillo);
     padding: 4rem;
     border-radius: 50%;
     margin-bottom: 7rem;
-    
+    width: 55%; 
 }
+@media (min-width:650px){
+    .productos{
+        width: 100%;
+    }
+}
+    
 .productos h3{
     color: var(--blanco);
     margin-top: 2rem;
+    font-size: 2rem;
     
 }
 .centrar-texto{
     text-align: center;
 }
-
-
-
 .hero-contacto{
     background-image:url("../../../assets/hero-contacto.jpg");
     height: 40rem;
@@ -60,7 +67,13 @@
     
 }
 .titulo-hero-contacto{
+    margin-bottom: 3rem;
     color: var(--blanco);
+}
+@media (min-width:650px){
+    .titulo-hero-contacto h3{
+        font-size: 3rem;
+    }
 }
 .positronxx{
     color: orange;

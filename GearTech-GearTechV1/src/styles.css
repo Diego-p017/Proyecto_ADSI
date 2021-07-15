@@ -1,6 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --primario: #222831;
+    --amarillo: #FF9F1C;
+    --negro: #000;
+    --gris: #7C7C7C;
+    --fondo: #1E1D1D;
+    --fuente-heading: 'PT Sans', sans-serif;
+    --fuente-parrafos: 'Open Sans', sans-serif;
+    --blanco: #fff;
 
-html, body { height: 100%; }
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    font-family: var(--fuente-heading)!important;
+    background-color: var(--fondo)!important;
+}
+
+/* Globales */
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.centrar-texto{
+    text-align: center;
+}
+a{
+    text-decoration: none!important;
+} 
+img{
+    max-width: 100%!important;
+}
+h1,h2,h3{
+    margin: 0!important;
+}
+h2{
+    font-size: 3rem!important;
+}
+
+
+
+
+/*html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html,
@@ -111,4 +160,4 @@ body {
 .main-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
 	padding: 0.8375em 0;
 }
-
+*/
