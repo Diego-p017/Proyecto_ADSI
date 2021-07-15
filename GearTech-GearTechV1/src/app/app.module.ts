@@ -23,6 +23,9 @@ import { AddProductComponent } from './Views/add-product/add-product.component';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { EditProductComponent } from './Views/edit-product/edit-product.component';
 import { ProductDetailComponent } from './Views/products/product-detail/product-detail.component';
+import { NosotrosComponent } from './Views/nosotros/nosotros.component';
+import { CarouselComponent } from './Templates/carousel/carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { ProductDetailComponent } from './Views/products/product-detail/product-
     ,HomeComponent
     ,ProductsComponent
     ,AddProductComponent
-    ,EditProductComponent, ProductDetailComponent
+    ,EditProductComponent
+    ,ProductDetailComponent
+    ,NosotrosComponent
+    ,CarouselComponent
   ],
   imports: [
     AngularMaterialModule
@@ -48,6 +54,7 @@ import { ProductDetailComponent } from './Views/products/product-detail/product-
     ,HttpClientModule
     ,IvyCarouselModule 
     ,ImageUploadModule.forRoot()
+    ,NgbModule
   ],
   providers:[],
   //providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 1500}}],
@@ -55,4 +62,3 @@ import { ProductDetailComponent } from './Views/products/product-detail/product-
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
- 

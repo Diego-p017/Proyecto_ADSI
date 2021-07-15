@@ -4,3 +4,9 @@ register-container .mat-form-field + .mat-form-field {
   ::ng-deep .warning{
     background: 'yellow';
 }
+.form-register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
