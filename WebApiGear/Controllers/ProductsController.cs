@@ -141,6 +141,8 @@ namespace WebApiGear.Controllers
                     PDb.ProductName = data.ProductName;
                     PDb.ProductPrice = data.ProductPrice;
                     PDb.ProductStock = data.ProductStock;
+                    PDb.Specifications = data.Specifications;
+                    PDb.Description = data.Description;
                     PDb.ImageProduct = data.ImageProduct;
                     PDb.IdCategory = data.IdCategory;
 

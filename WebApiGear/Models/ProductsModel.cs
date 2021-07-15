@@ -21,6 +21,9 @@ namespace WebApiGear.Models
 
         [Required]
         public int ProductStock { get; set; }
+        
+        public string Description { get; set; }
+        public string Specifications { get; set; }
 
         [Required]
         public string ImageProduct { get; set; }
