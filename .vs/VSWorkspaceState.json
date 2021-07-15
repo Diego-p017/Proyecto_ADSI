@@ -4,6 +4,9 @@
     "\\WebApiGear",
     "\\WebApiGear\\Context"
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\WebApiGear\\Context\\WebApiGearContext.cs",
+=======
+>>>>>>> Dev
   "PreviewInSolutionExplorer": false
 }
